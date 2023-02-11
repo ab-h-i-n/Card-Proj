@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{    scroll-behavior: smooth;}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #181818;
+}
+header,footer{
+    position:sticky;
+    color: white;
+    background-color: #121212;
+    text-align: center;
+}
+header{
+    padding-top: 1rem;
+    top:0;
+}
+footer{
+    bottom: 0;
+}
+nav{
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+}
+nav a{
+    display: block;
+    width: 100vw;
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+nav a:hover ,a:focus{
+    color: rgb(17, 17, 17);
+    background-color: white;
+}
+main{
+    flex-grow: 1;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+.card{
+    scroll-margin-top: 7.3rem;
+    background-color: rgb(8, 8, 8);
+    color: white;
+    padding: 1rem;
+    border-radius: 20px;
+    width: min(100% ,350px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    transition:0.2s;
+}
+.card:hover{
+    width: min(100%,500px);
+    }
+.card figure{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+.card figure img{
+    border-radius: 50%;
+    border: 8px double rgb(70, 70, 70);
+}
+figcaption{
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.7rem;
+}
+@media screen and (min-width:700px)
+{
+.card{
+    width: min(100% ,450px);
+}
+}
+@media screen and (min-width:1024px)
+{
+main{
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+nav{
+    display: none;
+}
+header{
+    padding: 2rem;
+}
+.card figcaption{
+    order: -1;
+}
+p{
+    margin: 1rem;
+    font-size: 1.3rem;
+}
+}
+@media  screen and (min-height:425px) and (min-aspect-ratio:7/4)
+{
+   main{
+    flex-flow: row nowrap;
+   }
+   nav{
+    display: none;
+   }
+   body{
+    font-size: .8rem;
+   }
+   .figcaption{
+  display: flex;
+  flex-wrap: nowrap;
+   }
+}
